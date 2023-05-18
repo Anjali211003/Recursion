@@ -1,0 +1,51 @@
+/* Print from n to1 using recursion */
+void printNos(int N)
+    {
+        if(N==0)
+       return;
+     cout<<N<<" ";
+    printNos(N-1);
+    }
+    
+    
+/* Print 1 to n -using recursion */
+    void printNos(int N)
+    {
+        if(N==0)
+       return;
+    printNos(N-1);
+    cout<<N<<" ";
+    }
+    
+
+/* Print array using recursion */
+printarray(int arr[],int n,int i )
+    {
+       if(i==n)
+       return;
+       cout<<arr[i]<<" ";
+       i++;
+       printarray(arr,n,i);
+    }
+    
+    
+/* Print reverse array using recursion */
+printreversearray(int arr[],int n,int i )
+    {
+       if(i>=n)
+       return;
+      
+      temp=arr[i];
+      arr[i]=arr[n];
+      arr[n]=temp;
+       printreversearray(arr,n-1,i+1);
+    }
+    
+    
+/* Find maximum element in array using recursion */
+int largest(vector<int> &arr, int n)
+    {
+        if(n==1)
+        return arr[0];
+        return max(arr[n-1],largest(arr,n-1));
+    }
