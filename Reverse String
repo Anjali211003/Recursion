@@ -1,0 +1,20 @@
+class Solution {
+public:
+  
+  
+    void reverse(vector<char>& s)
+    {  if(s.size()==0)
+       return;
+      char ip=s[0];
+      s.erase(s.begin());
+      reverse(s);
+       s.push_back(ip);
+      return;
+    }
+      void reverseString(vector<char>& s) {
+      if(s.size()==0)
+       return;
+       
+       reverse(s);
+    }
+};
